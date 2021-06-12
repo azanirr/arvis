@@ -1,0 +1,55 @@
+.Detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Container{
+    margin-top: 100px;
+    width: 50%;
+}
+.Container img{
+    width: 100%;
+    height: 400px;
+}
+
+
+.Price{
+    margin-bottom: 20px;
+    color: #555;
+}
+.Desc{
+    color: #222;
+    margin-bottom: 100px;
+}
+
+.Cart {
+    padding-bottom: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.Cart button {
+    box-sizing: border-box;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: 	#df4759;
+    padding: 10px 40px;
+    transition: all 0.3s ease 0s;
+}
+
+.Cart button:hover{
+    transition: all 0.3s ease 0s;
+    color: #ccc;
+    background-color: #df5570;
+}
+
+.Icon {
+    margin-left: 5px;
+}

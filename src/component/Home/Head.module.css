@@ -1,0 +1,25 @@
+.Head {
+    background-image: url('../../assets/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Title img{
+    width: 100px;
+    height: 30px;
+}
+.Title h1{
+    color:white;
+    font-weight: normal;
+}

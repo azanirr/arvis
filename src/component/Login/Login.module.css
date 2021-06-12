@@ -1,0 +1,120 @@
+.ErrorMsg {
+    color: #D65445;
+    font-size: 14px;
+}
+
+.ErrorInput {
+    box-shadow: 0 0 5px rgb(236, 42, 42);
+}
+
+.Modal{
+	max-height: calc(100vh - 50px);
+	overflow-y: auto;
+	position: relative;
+}
+
+
+.Login {
+    width: 400px;
+	background: #FFFFFF;
+	border-radius: 4px;
+	position: relative;
+	margin: 47px auto;
+	display: flex;
+	flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    outline: none;
+    padding: 37px 37px 60px 37px;
+}
+.Login::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.Login {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+}
+
+.Header h1{
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.Header>button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+.Form {
+    width: 100%;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.Header>button:hover {
+    font-weight: bold;
+    color: #D65445;
+}
+
+.Login input {
+    background: #FCFCFC;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.Login input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgb(35, 202, 191);
+    padding: 10px;
+    border: 1px solid rgb(30, 184, 173);
+}
+
+.Submit button {
+    width: 300px;
+    background: #BBE4D8;
+    border-radius: 4px;
+    color: #367874;
+    border: none;
+    /* padding: 10px 0px 0px 20px; */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+.Submit button:hover {
+    background: #57b89b;
+    color: #a9f1ed;
+
+
+}
