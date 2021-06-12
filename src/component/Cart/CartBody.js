@@ -2,6 +2,7 @@ import styles from './CartBody.module.css';
 import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
 import RemoveIcon from '@material-ui/icons/Remove';
 import AddIcon from '@material-ui/icons/Add';
@@ -117,6 +118,11 @@ function CartBody () {
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell align="right">{totalPriceAll}</TableCell>
+                        <TableCell align="right">
+                            <Button variant="contained" color="primary" type="submit">
+                                BUY NOW
+                            </Button>
+                        </TableCell>
                     </TableRow>
                     </TableBody>
                 </Table>

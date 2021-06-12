@@ -39,18 +39,26 @@
 
 .Header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .Header h1{
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 400;
+}
+
+.Header img{
+    padding: 10px 0;
+    height: 30px;
+    width: 100px;
 }
 
 .Header>button {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 10px;
+    right: 10px;
     background: none;
     font-size: 24px;
     border: none;
@@ -96,25 +104,39 @@ form div{
 
 .Submit button {
     width: 300px;
-    background: #BBE4D8;
-    border-radius: 4px;
-    color: #367874;
-    border: none;
-    /* padding: 10px 0px 0px 20px; */
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.75px;
-    outline: none;
-    box-sizing: border-box;
     padding: 10px;
-    cursor: pointer;
     
 }
+.AuthFacebook button{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.AuthFacebook {
 
-.Submit button:hover {
-    background: #57b89b;
-    color: #a9f1ed;
+}
 
+.AuthFacebook img{
+    width: 30px;
+    height: 20px;
+}
+.AuthGoogle img {
+    width: 20px;
+    height: 20px;
+}
 
+.Form p {
+    font-size: 13px;
+    margin-top: 20px;
+    color: #aaa;
+}
+
+.AuthGoogle button{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }

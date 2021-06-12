@@ -12,7 +12,8 @@ function DetailBody (props) {
     const idItem = Number(id);
 
     const [detail, setDetail] = useState([]),
-          [user, setUser] = useState(false);
+          [user, setUser] = useState(false),
+          [cart, setCart] = useState(false);
 
     const { data } = props;
 
@@ -25,6 +26,25 @@ function DetailBody (props) {
         const filtered = data.filter(filter => filter.id === idItem);
         setDetail(filtered);
     }, [data, idItem])
+
+    useEffect(() => {
+        if (localStorage.getItem('cart')) {
+            setCart(JSON.parse(localStorage.getItem('cart')))
+        }
+    }, [])
+
+    const handleDisabled = (id) => {
+        if (cart) {
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].id === id) {
+                    return true;
+                }
+            }
+            return false;
+        } else {
+            return false;
+        }
+    }
 
     const addToCartHandle = (list) => {
         if (user) {
@@ -74,7 +94,7 @@ function DetailBody (props) {
                         <p className={styles.Price}>Price: Rp.{list.price}</p>
                         <p className={styles.Desc}>{list.desc}</p>
                         <div className={styles.Cart}>
-                            <button disabled={list.cart} onClick={() => addToCartHandle(list)}>
+                            <button disabled={handleDisabled(list.id)} onClick={() => addToCartHandle(list)}>
                                 Add To Cart  <ShoppingCartIcon className={styles.Icon} />
                             </button>
                         </div>

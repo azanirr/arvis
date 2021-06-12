@@ -1,0 +1,19 @@
+.Container {
+	background: #F7F6ED;
+    padding: 50px 0;
+}
+
+.Container div{
+	width: 100%;
+	margin: 0 auto;
+}
+.Container p{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.44px;
+	color: #aaa;
+}

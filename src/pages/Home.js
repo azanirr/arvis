@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../component/Navbar/Navbar';
 import Head from '../component/Home/Head';
 import Body from '../component/Home/Body';
+import Footer from '../component/Footer/Footer';
 
 function Home (props) {
 
@@ -13,6 +14,7 @@ function Home (props) {
             <Head />
             <Body
                 data={data} />
+            <Footer />
         </div>
     )
 }

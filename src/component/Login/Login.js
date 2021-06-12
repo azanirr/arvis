@@ -3,9 +3,13 @@ import { Modal } from "@material-ui/core";
 import React from 'react';
 import styles from './Login.module.css';
 import { useFormik } from "formik";
+import Button from '@material-ui/core/Button';
 import * as Yup from "yup";
 import firebase from '../../config/firebase-config';
 import Swal from "sweetalert2";
+import Logo from '../../assets/spotifygreen.png';
+import LogoG from '../../assets/google.png';
+import LogoF from '../../assets/fb.png'
 import { socialMediaAuth } from '../../service/auth';
 import { facebookProvider, googleProvider } from '../../config/authMethods';
 
@@ -63,7 +67,8 @@ function Login (props) {
         <Modal open={open} onClose={onClose} className={styles.Modal}>
             <div className={styles.Login}>
                 <div className={styles.Header}>
-                    <h1>Login</h1>
+                    <img src={Logo} alt={Logo}></img>
+                    <h1>Login Your Account</h1>
                     <button onClick={onClose}>
                         <CloseIcon />
                     </button>
@@ -100,20 +105,23 @@ function Login (props) {
                             <div className={styles.ErrorMsg}>{formik.errors.password}</div>
                             ) : null}
                         </div>
-                        <div className={styles.Submit}>
-                            <button type="submit">
-                                Login Here
-                            </button>
+                        <div className={styles.Submit} >
+                            <Button variant="contained" color="primary" type="submit">
+                                LOGIN
+                            </Button>
                         </div>
-                        <div className={styles.AuthFacebook}>
-                            <button onClick={() => handleSocialLogin(facebookProvider)}>
-                                Facebook Login
-                            </button>
+                        <p>Sign In With</p>
+                        <div className={styles.AuthFacebook} onClick={() => handleSocialLogin(facebookProvider)}>
+                            <Button
+                            variant="contained"
+                            color="primary">
+                            <img src={LogoF} alt={LogoF}></img></Button>
                         </div>
-                        <div onClick={() => handleSocialLogin(googleProvider)}>
-                            <button type="submit">
-                                Google Login
-                            </button>
+                        <div className={styles.AuthGoogle} onClick={() => handleSocialLogin(googleProvider)}>
+                        <Button
+                            variant="contained"
+                            color="secondary">
+                        <img src={LogoG} alt={LogoG}></img></Button>
                         </div>
                     </form>
                 </div>

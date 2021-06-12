@@ -2,7 +2,9 @@ import CloseIcon from "@material-ui/icons/Close";
 import { Modal } from "@material-ui/core";
 import React from 'react';
 import styles from './Register.module.css';
+import Logo from '../../assets/spotifygreen.png';
 import { useFormik } from "formik";
+import Button from '@material-ui/core/Button';
 import * as Yup from "yup";
 import firebase from '../../config/firebase-config';
 import Swal from "sweetalert2";
@@ -52,12 +54,13 @@ function Register (props) {
         <Modal open={open} onClose={onClose} className={styles.Modal}>
             <div className={styles.Login}>
                 <div className={styles.Header}>
-                    <h1>Register</h1>
+                    <img src={Logo} alt={Logo}></img>
+                    <h1>Register Your Account</h1>
                     <button onClick={onClose}>
                         <CloseIcon />
                     </button>
                 </div>
-                <div>
+                <div className={styles.Form}>
                     <form onSubmit={formik.handleSubmit} noValidate>
                         <div>
                             <label htmlFor="email">Email</label>
@@ -90,9 +93,9 @@ function Register (props) {
                             ) : null}
                         </div>
                         <div className={styles.Submit}>
-                            <button type="submit">
+                            <Button variant="contained" color="primary"  type="submit">
                                 Register Here
-                            </button>
+                            </Button>
                         </div>
                     </form>
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../component/Navbar/Navbar';
 import Detail from '../component/Detail/DetailBody';
+import Footer from '../component/Footer/Footer';
 
 function Home (props) {
 
@@ -10,6 +11,7 @@ function Home (props) {
         <div>
             <Navbar />
             <Detail data={data}/>
+            <Footer />
         </div>
     )
 }
